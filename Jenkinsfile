@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('fetch') {
+        stage('clone') {
             steps {
-                echo "fathing.."
+                sh 'git clone https://github.com/CohenItsMe/requests'
             }
         }
         stage('build') {
